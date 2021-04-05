@@ -14,6 +14,11 @@ public class Main {
         System.out.println("wprowadz sciezke do pliku");
         filePath = skaner.nextLine();
         File file = new File(filePath);
+        zapiszTekst(skaner, file);
+    }
+
+    private static void zapiszTekst(Scanner skaner, File file) {
+        String textLine;
         try (FileWriter fileWriter = new FileWriter(file)) {
             while (true) {
                 System.out.println("wporwadz linijke tekstu,jezeli chcesz" +
